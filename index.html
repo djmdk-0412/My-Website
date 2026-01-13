@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madhuka Gihan | Electrical Engineering Undergraduate</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom Config for Brand Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            light: '#60a5fa', // Blue-400
+                            DEFAULT: '#2563eb', // Blue-600
+                            dark: '#1e3a8a', // Blue-900
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #657182;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <span class="text-2xl font-bold text-brand-dark">MDK<span class="text-brand">.</span></span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <html class="scroll-smooth">
+
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-slate-600 hover:text-brand font-medium transition">About</a>
+                    <a href="#skills" class="text-slate-600 hover:text-brand font-medium transition">Skills</a>
+                    <a href="#education" class="text-slate-600 hover:text-brand font-medium transition">Education</a>
+                    <a href="#projects" class="text-slate-600 hover:text-brand font-medium transition">Projects</a>
+                    <a href="#contact" class="text-slate-600 hover:text-brand font-medium transition">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-brand focus:outline-None">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="block px-3 py-2 text-slate-600 hover:text-brand hover:bg-slate-50 rounded-md">About</a>
+                <a href="#skills" class="block px-3 py-2 text-slate-600 hover:text-brand hover:bg-slate-50 rounded-md">Skills</a>
+                <a href="#education" class="block px-3 py-2 text-slate-600 hover:text-brand hover:bg-slate-50 rounded-md">Education</a>
+                <a href="#projects" class="block px-3 py-2 text-slate-600 hover:text-brand hover:bg-slate-50 rounded-md">Projects</a>
+                <a href="#contact" class="block px-3 py-2 text-slate-600 hover:text-brand hover:bg-slate-50 rounded-md">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative min-h-screen flex items-center justify-center bg-slate-900 overflow-hidden">
+        <!-- Background Overlay Image -->
+        <div class="absolute inset-0 z-0 opacity-20">
+            <img src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?q=80&w=2069&auto=format&fit=crop" alt="Circuit Board" class="w-full h-full object-cover">
+        </div>
+        
+        
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto" data-aos="fade-up" data-aos-duration="1000">
+            <p class="text-brand-light font-medium tracking-wider mb-4 uppercase">
+                Electrical Engineering Undergraduate
+            </p>
+
+    <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+        Powering Ideas <br>
+        Through <span class="text-brand">Smart Engineering</span>
+    </h1>
+
+    <p class="text-slate-300 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
+        Passionate about electronics, embedded systems, and real-world problem solving.
+        I design reliable hardware solutions that connect innovation with impact.
+    </p>
+
+     <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#projects" class="px-8 py-4 bg-brand hover:bg-brand-dark text-white rounded-lg font-semibold transition shadow-lg hover:shadow-brand/50">
+                    View My Work
+                </a>
+                <a href="assets/CV.pdf" class="px-8 py-4 border border-slate-500 text-slate-200 hover:bg-white hover:text-brand-dark rounded-lg font-semibold transition">
+                    Download CV <i class="fas fa-download ml-2"></i>
+                </a>
+            </div>
+</div>
+
+        
+       <a href="#about"
+   class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-slate-400 hover:text-brand transition">
+    <i class="fas fa-chevron-down text-2xl"></i>
+</a>
+
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 md:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="relative" data-aos="fade-right">
+                    <div class="absolute -inset-4 bg-brand/20 rounded-xl transform -rotate-2"></div>
+                    <!-- Placeholder for Student Photo -->
+                    <img src="assets\madhuka.jpeg" alt="Profile" class="relative rounded-xl shadow-2xl w-full h-100 object-cover object-top">
+                </div>
+                
+                <div data-aos="fade-left">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-6">About Me</h2>
+                    <p class="text-slate-600 mb-6 leading-relaxed text-justify">
+                        Hello! I'm <span class="font-bold text-brand-dark">Madhuka Gihan</span>, a second year Electrical Engineering student at University of Moratuwa. My journey started with dismantling old radios, which sparked a curiosity that has grown into a passion for creating efficient electronic systems.
+                    </p>
+                    <p class="text-slate-600 mb-8 leading-relaxed text-justify">
+                        While I am early in my career, I have dedicated my academic years to mastering circuit analysis and microcontroller programming. I am a quick learner, a team player, and eager to apply my theoretical knowledge to real-world industrial challenges.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-100">
+                            <i class="fas fa-bolt text-brand text-2xl mb-2"></i>
+                            <h4 class="font-bold text-slate-800">Power Systems</h4>
+                        </div>
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-100">
+                            <i class="fas fa-microchip text-brand text-2xl mb-2"></i>
+                            <h4 class="font-bold text-slate-800">Embedded IoT</h4>
+                        </div>
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-100">
+                            <i class="fas fa-bolt text-brand text-2xl mb-2"></i>
+                            <h4 class="font-bold text-slate-800">Digital Signal Processing</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-slate-900">Technical Proficiency</h2>
+                <p class="text-slate-500 mt-2">Tools and technologies I use to bring ideas to life</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Software/Programming -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-xl font-bold text-slate-800 mb-6 flex items-center">
+                        <i class="fas fa-code text-brand mr-3"></i> Programming
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium">C / C++</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium">Python</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium">MATLAB</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium">Java</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium">HTML</span>
+                    </div>
+                </div>
+
+                <!-- Hardware/Design -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-xl font-bold text-slate-800 mb-6 flex items-center">
+                        <i class="fas fa-tools text-brand mr-3"></i> Design Tools
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium">Falstad</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium">SolidWorks</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium">LTSpice</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium">Matlab</span>
+                    </div>
+                </div>
+
+                <!-- Embedded Systems -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-xl font-bold text-slate-800 mb-6 flex items-center">
+                        <i class="fas fa-microchip text-brand mr-3"></i> Hardware
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium">Arduino</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium">ESP32</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium">Raspberry Pi</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium">Oscilloscopes</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certifications -->
+    <section id="education" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                
+                <!-- Education Column -->
+                <div data-aos="fade-right">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-8 flex items-center">
+                        <i class="fas fa-graduation-cap text-brand mr-3"></i> Education
+                    </h2>
+                    
+                    <div class="border-l-4 border-brand/20 ml-2 space-y-12 pl-8 relative">
+                        <!-- Degree -->
+                        <div class="relative">
+                            <span class="absolute -left-11 top-1 h-6 w-6 rounded-full bg-brand border-4 border-white"></span>
+                            <h3 class="text-xl font-bold text-slate-800">B.Sc. in Electrical Engineering</h3>
+                            <p class="text-brand font-medium">University of Moratuwa</p>
+                            <p class="text-sm text-slate-500 mb-2">2023 - Present (Expected 2027)</p>
+                            <p class="text-slate-600">
+                                Current GPA: 3.74/4.0<br>
+                                Relevant Coursework: Circuit Analysis, Digital Systems, Microcontrollers, Power Systems,Mathematics.
+                            </p>
+                        </div>
+                        
+                        <!-- High School -->
+                        <div class="relative">
+                            <span class="absolute -left-11 top-1 h-6 w-6 rounded-full bg-slate-300 border-4 border-white"></span>
+                            <h3 class="text-xl font-bold text-slate-800">Physical Science Stream</h3>
+                            <p class="text-brand font-medium">Richmond College</p>
+                            <p class="text-sm text-slate-500 mb-2">2021 - 2023</p>
+                            <p class="text-slate-600">
+                                Passed with 3 Distinctions in Physics, Chemistry, and Combine Mathematics.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certifications Column -->
+                <div data-aos="fade-left">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-8 flex items-center">
+                        <i class="fas fa-certificate text-brand mr-3"></i> Certifications
+                    </h2>
+                    
+                    <div class="space-y-4">
+                        <!-- Cert 1 -->
+                        <div class="flex items-start p-4 rounded-lg bg-slate-50 hover:bg-slate-100 transition">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-award text-yellow-500 text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-bold text-slate-800">Introduction to IoT and Embedded Systems</h4>
+                                <p class="text-sm text-slate-500">Coursera - University of California, Irvine</p>
+                            </div>
+                        </div>
+
+                        <!-- Cert 2 -->
+                        <div class="flex items-start p-4 rounded-lg bg-slate-50 hover:bg-slate-100 transition">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-award text-yellow-500 text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-bold text-slate-800">Python for Everybody</h4>
+                                <p class="text-sm text-slate-500">University of Moratuwa</p>
+                            </div>
+                        </div>
+
+                         <!-- Cert 3 -->
+                         <div class="flex items-start p-4 rounded-lg bg-slate-50 hover:bg-slate-100 transition">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-award text-yellow-500 text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-bold text-slate-800">MATLAB</h4>
+                                <p class="text-sm text-slate-500">MathWorks</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-slate-900">Academic Projects</h2>
+                <p class="text-slate-500 mt-2">Highlights from my university coursework and hobby builds</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Project Card 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg group hover:shadow-2xl transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="absolute inset-0 bg-brand/10 group-hover:bg-transparent transition z-10"></div>
+                        <img src="assets\classroom_lighting.png" alt="Smart Home" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-slate-900">Automatic Classroom Lighning Control System</h3>
+                            <a href="#" class="text-slate-400 hover:text-brand"><i class="fab fa-github text-xl"></i></a>
+                        </div>
+                        <p class="text-slate-600 text-sm mb-4 text-justify">
+                            Our project creates a smart classroom lighting system that saves energy and improves comfort. It combines motion (PIR) sensors and light (LDR) sensors to detect occupancy and natural daylight. Lights automatically adjust, reducing waste without any manual effort.
+                        </p>
+                        <div class="flex flex-wrap gap-2 text-xs">
+                            <span class="px-2 py-1 bg-blue-50 text-blue-600 rounded">Arduino</span>
+                            <span class="px-2 py-1 bg-blue-50 text-blue-600 rounded">C++</span>
+                            <span class="px-2 py-1 bg-blue-50 text-blue-600 rounded">PID Controller</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg group hover:shadow-2xl transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="absolute inset-0 bg-brand/10 group-hover:bg-transparent transition z-10"></div>
+                        <img src="assets\ALII_Model.jpeg" alt="Robot" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-slate-900">Advanced-Light-Intensity-Indicator-ALII-Module</h3>
+                            <a href="#" class="text-slate-400 hover:text-brand"><i class="fab fa-github text-xl"></i></a>
+                        </div>
+                        <p class="text-slate-600 text-sm mb-4 text-justify">
+                           The ALII is a hardware-based light monitoring system that measures, filters, and displays real-time and average light levels using an LDR. It includes noise filtering, stability control, adjustable timing, and dual seven-segment displays.
+                        </p>
+                        <div class="flex flex-wrap gap-2 text-xs">
+                            <span class="px-2 py-1 bg-blue-50 text-blue-600 rounded">Flip-Flops</span>
+                            <span class="px-2 py-1 bg-blue-50 text-blue-600 rounded">Gate-Ics</span>
+                            <span class="px-2 py-1 bg-blue-50 text-blue-600 rounded">LDR</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg group hover:shadow-2xl transition duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="absolute inset-0 bg-brand/10 group-hover:bg-transparent transition z-10"></div>
+                        <img src="assets\GPA_Cal.png" alt="Circuit" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-slate-900">GPA Calculator</h3>
+                            <a href="#" class="text-slate-400 hover:text-brand"><i class="fab fa-github text-xl"></i></a>
+                        </div>
+                        <p class="text-slate-600 text-sm mb-4 text-justify">
+                            Streamlit app automates GPA calculations from PDF/Excel result sheets, extracting grades and indices starting with "230", aggregating across subjects with customizable credits, and exporting searchable results.
+                        </p>
+                        <div class="flex flex-wrap gap-2 text-xs">
+                            <span class="px-2 py-1 bg-blue-50 text-blue-600 rounded">Python</span>
+                            <span class="px-2 py-1 bg-blue-50 text-blue-600 rounded">Logics</span>
+                            <span class="px-2 py-1 bg-blue-50 text-blue-600 rounded">Pandas & Streamlit</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-slate-900">Get In Touch</h2>
+                <p class="text-slate-500 mt-2">Currently looking for internship opportunities</p>
+            </div>
+
+            <div class="bg-slate-50 p-8 rounded-2xl shadow-lg border border-slate-100" data-aos="zoom-in">
+                <form action="#" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-2">Name</label>
+                            <input type="text" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-brand focus:ring-2 focus:ring-brand/20 outline-none transition" placeholder="Your Name">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-2">Email</label>
+                            <input type="email" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-brand focus:ring-2 focus:ring-brand/20 outline-none transition" placeholder="john@example.com">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-2">Message</label>
+                        <textarea rows="4" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-brand focus:ring-2 focus:ring-brand/20 outline-none transition" placeholder="Hello..."></textarea>
+                    </div>
+                    <button type="button" class="w-full py-4 bg-brand text-white font-bold rounded-lg hover:bg-brand-dark transition shadow-lg shadow-brand/30">
+                        Send Message
+                    </button>
+                </form>
+
+                <div class="mt-8 flex justify-center space-x-8 border-t border-slate-200 pt-8">
+                    <!a href="https://www.linkedin.com/in/madhuka-gihan-8345b1344/" class="text-slate-400 hover:text-brand transition transform hover:-translate-y-1">
+                        <!i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/madhuka-gihan-8345b1344/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-slate-400 hover:text-brand transition transform hover:-translate-y-1">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+
+                    <a href="https://github.com/djmdk-0412" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-slate-400 hover:text-brand transition transform hover:-translate-y-1">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                    <a href="mailto:djmdk0412@gmail.com" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-slate-400 hover:text-brand transition transform hover:-translate-y-1">
+                        <i class="fas fa-envelope text-2xl"></i>
+                    </a>
+                    <a href="https://web.facebook.com/madhuka.gihan.12" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-slate-400 hover:text-brand transition transform hover:-translate-y-1">
+                        <i class="fab fa-facebook text-2xl"></i>
+                    </a>
+                    <a href="https://wa.me/94740065915" 
+                        target="_blank"
+                        <i class="fab fa-whatsapp text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-6 text-center text-sm">
+    <p>&copy; 2026 Madhuka Gihan. Built with HTML & Tailwind CSS</p>
+</footer>
+
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize Animations
+        AOS.init({
+            once: true,
+            offset: 100,
+        });
+
+        // Mobile Menu Toggle logic
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
